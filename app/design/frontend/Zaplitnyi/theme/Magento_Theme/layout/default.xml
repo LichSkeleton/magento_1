@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="logo">
@@ -13,5 +7,34 @@
                 <argument name="logo_alt" xsi:type="string" translate="true">Logo</argument>
             </arguments>
         </referenceBlock>
+
+        <!-- <referenceContainer name="main">
+            <block template="">
+                <container name="custom.container" label="Custom Container in Block"/>
+            </block>
+        </referenceContainer> -->
+
+        <!-- <referenceContainer name="content">
+            <container name="custom.container" htmlTag="div" htmlClass="custom-block">
+                <block name="custom.block" class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string">Custom Text</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer> -->
+
+        <!-- <referenceContainer name="content">
+            <block name="custom.block" template="Magento_Theme::custom.phtml">
+                <block name="default.xml_before1" before="-"/>
+                <block name="default.xml_before2" before="-"/>
+                <block name="default.xml_after1" after="-"/>
+                <block name="default.xml_after2" after="-"/> 
+            </block>
+        </referenceContainer> -->
+
+        <!-- <referenceContainer name="content">
+            <block template="Magento_Theme::handles.phtml"/>
+        </referenceContainer> -->
     </body>
 </page>
