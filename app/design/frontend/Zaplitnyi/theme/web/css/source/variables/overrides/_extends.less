@@ -1,0 +1,71 @@
+.block-promo-hp .block-promo {
+    // border: 10px dotted red;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+div.page-wrapper header.page-header div.panel.wrapper div.panel.header ul.header.links li.greet.welcome {
+    display: none;
+}
+
+& when (@media-common =true) {
+    @variable: false; // It's to make header and footer hidden
+
+    body {
+        .lib-css(background, @background);
+        .lib-font-size(20px);
+        .lib-line-height(24px);
+    }
+
+    .header .logo {
+        background-color: white;
+        border: 10px solid white;
+        border-radius: 25px;
+    }
+
+    & when (@variable =true) {
+        .page-header {
+            // .lib-visibility-hidden();
+            &:extend(.abs-hidden); // This group with bellow one
+        }
+
+        .page-footer {
+            // .lib-visibility-hidden();
+            &:extend(.abs-hidden); // This group with above one
+        }
+    }
+
+    footer.page-footer div.footer.content small.copyright {
+        text-align: center;
+    }
+}
+
+div.page-wrapper div.cart-container div.cart-summary{
+    background: none;
+}
+div.page-wrapper div.opc-block-summary{
+    background: none;
+}
+.cms-content table > tbody > tr:nth-child(2n) > td, .cms-content table > tbody > tr:nth-child(2n) > th{
+    background: @color_blue2 !important;
+}
+div.page-wrapper fieldset.fieldset.create.account .password-strength-meter{
+    color: @color_blue2;
+}
+
+// Desktop
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .header.content {
+        // display: flex;
+        // flex-grow: 0;
+        // background: rgb(219, 189, 91);
+    }
+
+}
+
+// Mobile
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+
+}
